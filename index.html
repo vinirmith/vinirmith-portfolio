@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Vinirmith — AI Engineer</title>
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <main class="app" role="main">
+        <section class="window" aria-label="Vinirmith terminal">
+
+            <header class="titlebar">
+                <div class="traffic" aria-hidden="true">
+                    <span class="dot dot--close"></span>
+                    <span class="dot dot--min"></span>
+                    <span class="dot dot--max"></span>
+                </div>
+                <div class="titlebar__title">
+                    <span class="titlebar__label">terminal</span>
+                </div>
+                <div class="titlebar__meta">
+                    <span class="pill pill--live"><span class="pulse"></span> open to work</span>
+                </div>
+            </header>
+
+            <div class="terminal">
+                <div id="terminal-banner" class="terminal-banner" aria-hidden="true"></div>
+                <div id="terminal-screen" class="terminal-screen">
+                    <div id="terminal-pinned" class="terminal-pinned"></div>
+                <div id="terminal-output" class="terminal-output"></div>
+                    <div class="terminal-input-line" id="input-line">
+                        <span class="p-user">guest</span><span class="p-at">@</span><span class="p-host">vinirmith</span><span class="p-arrow"> › </span><span id="input-display" class="input-display"></span><span class="cursor" id="cursor">█</span>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="statusbar">
+                <div class="statusbar__left">
+                    <span class="statusbar__item"><kbd>Tab</kbd> complete</span>
+                    <span class="statusbar__item"><kbd>↑ ↓</kbd> history</span>
+                    <span class="statusbar__item"><kbd>Ctrl</kbd>+<kbd>C</kbd> cancel</span>
+                    <span class="statusbar__item"><kbd>Ctrl</kbd>+<kbd>L</kbd> clear</span>
+                    <span class="statusbar__item statusbar__item--mobile">tap to type</span>
+                    <span class="statusbar__item statusbar__item--mobile">enter submits</span>
+                </div>
+                <div class="statusbar__right">
+                    <span id="status-text">/help for commands</span>
+                </div>
+            </footer>
+
+        </section>
+    </main>
+
+    <textarea id="input-capture" class="input-capture" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="text"></textarea>
+
+    <script src="script.js"></script>
+</body>
+</html>
