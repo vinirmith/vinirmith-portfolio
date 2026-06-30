@@ -68,7 +68,7 @@ const COMMANDS = {
         line('');
         line('  ── Summary ──────────────────────────────────────────────────────', 'pink');
         line('  I build production AI systems — LLM security agents, autonomous', 'mute');
-        line('  enterprise workflows, and fine-tuned models that ship. 3+ years', 'mute');
+        line('  enterprise workflows, and fine-tuned models that ship. 4+ years', 'mute');
         line('  across fintech, computer vision, and GenAI, moving real metrics.', 'mute');
         line('');
         line('  Currently  Senior AI/ML Engineer @ StackNexus, Hyderabad', 'mute');
