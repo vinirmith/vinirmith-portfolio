@@ -57,7 +57,7 @@ let cmdHistory   = [];
 let histIdx      = -1;
 let draftInput   = '';
 
-const CMD_LIST = ['about', 'skills', 'experience', 'contact', 'help', 'clear'];
+const CMD_LIST = ['about', 'skills', 'experience', 'projects', 'contact', 'help', 'clear'];
 
 const COMMANDS = {
     about: () => {
@@ -67,17 +67,12 @@ const COMMANDS = {
         line('  Mobile: +91 7995678578  |  Hyderabad, India', 'dim');
         line('');
         line('  ── Summary ──────────────────────────────────────────────────────', 'pink');
-        line('  Highly skilled AI/ML Engineer with extensive experience in designing,', 'mute');
-        line('  developing and implementing cutting-edge machine learning, deep', 'mute');
-        line('  learning, and Generative AI (GenAI) models, including Large Language', 'mute');
-        line('  Models (LLMs) and Retrieval-Augmented Generation (RAG) systems.', 'mute');
-        line('  Proficient in leveraging advanced statistical techniques, neural', 'mute');
-        line('  network architectures (including Transformer models like GPT, BERT)', 'mute');
-        line('  and cloud platforms such as AWS to solve complex problems across', 'mute');
-        line('  various domains. Adept at data pre-processing, feature engineering,', 'mute');
-        line('  model selection and performance optimization to deliver robust,', 'mute');
-        line('  scalable and cloud-native solutions. Skilled in using frameworks like', 'mute');
-        line('  LangChain, LlamaIndex for developing and fine-tuning LLM applications.', 'mute');
+        line('  I build production AI systems — LLM security agents, autonomous', 'mute');
+        line('  enterprise workflows, and fine-tuned models that ship. 3+ years', 'mute');
+        line('  across fintech, computer vision, and GenAI, moving real metrics.', 'mute');
+        line('');
+        line('  Currently  Senior AI/ML Engineer @ StackNexus, Hyderabad', 'mute');
+        line('  Stack      LLMs · RAG · Agents (MCP/A2A) · LoRA/QLoRA · AWS', 'dim');
         line('');
         line('  ── Education ────────────────────────────────────────────────────', 'pink');
         line('  B.Sc Statistics and Mathematics', 'mute');
@@ -90,8 +85,17 @@ const COMMANDS = {
         line('  Post Graduation in Computational Data Science', 'mute');
         line('  International School of Engineering (INSOFE), 2023', 'dim');
         line('');
-        line('  Power BI Virtual Case Experience', 'mute');
-        line('  Forage, 2023', 'dim');
+        line('  Building with Claude API', 'mute');
+        line('  Anthropic, 2025', 'dim');
+        linkLine('  ↗ ', 'https://verify.skilljar.com/c/q5nwyfk23jjd');
+        line('');
+        line('  Introduction to MCP', 'mute');
+        line('  Anthropic, 2025', 'dim');
+        linkLine('  ↗ ', 'https://verify.skilljar.com/c/55v9usntytjs');
+        line('');
+        line('  Claude Code in Action', 'mute');
+        line('  Anthropic, 2025', 'dim');
+        linkLine('  ↗ ', 'https://verify.skilljar.com/c/3y7cpqjwwzhi');
         line('');
     },
     skills: () => {
@@ -103,10 +107,20 @@ const COMMANDS = {
         line('    GCP  – Studio, Looker, VertexAI', 'mute');
         line('    Azure – Blob, Power Automate, Power App', 'mute');
         line('');
-        line('  GenAI', 'pink');
+        line('  GenAI & LLM Stack', 'pink');
         line('    Hugging Face · LlamaIndex · Ollama · llamacpp · OpenAI API', 'mute');
         line('    LangChain · Transformers (GPT, BERT)', 'mute');
         line('    Fine-tuning: LoRA / QLoRA (PEFT)', 'mute');
+        line('    MCP (Model Context Protocol)', 'mute');
+        line('    RAG · OKF (Google)', 'mute');
+        line('    RAG Eval: Recall@K · Precision@K · Answer Relevance', 'mute');
+        line('');
+        line('  Agentic AI Frameworks', 'pink');
+        line('    PhiData · CrewAI · OpenClaw · Hermes', 'mute');
+        line('    A2A · ADK (Google) · Claude Code', 'mute');
+        line('');
+        line('  Conversational AI', 'pink');
+        line('    ElevenLabs · Retell AI · Vapi', 'mute');
         line('');
         line('  ML & AI Libraries', 'pink');
         line('    PyTorch · TensorFlow · Keras', 'mute');
@@ -121,7 +135,7 @@ const COMMANDS = {
         line('    REST API · Flask API · Python', 'mute');
         line('');
         line('  DevOps & Version Control', 'pink');
-        line('    Git · GitHub · GitLab', 'mute');
+        line('    Git · GitHub · GitLab · Docker', 'mute');
         line('');
         line('  ── Soft Skills ──────────────────────────────────────────────────', 'pink');
         line('    Problem Solving and Statistical Analytical Ability', 'mute');
@@ -205,11 +219,40 @@ const COMMANDS = {
     },
     contact: () => {
         line('');
-        line('  Email      kuretivinirmith1@gmail.com', 'pink');
-        line('  Work       vinirmith.kureti@stacknexus.io', 'pink');
+        line('  ── Get in touch ─────────────────────────────────────────────────', 'pink');
+        line('');
+        linkLine('  Email      ', 'mailto:kuretivinirmith1@gmail.com');
+        linkLine('  GitHub     ', 'https://github.com/vinirmith');
+        linkLine('  LinkedIn   ', 'https://linkedin.com/in/vinirmith-kureti');
         line('  Mobile     +91 7995678578', 'mute');
-        line('  LinkedIn   linkedin.com/in/vinirmith-kureti', 'mute');
         line('  Location   Hyderabad, India', 'dim');
+        line('');
+    },
+    projects: () => {
+        line('');
+        line('  ── Projects ─────────────────────────────────────────────────────', 'pink');
+        line('');
+        line('  Agentic-RAG                                              Python', 'mute');
+        line('  Agentic retrieval-augmented generation pipeline', 'dim');
+        linkLine('  → ', 'https://github.com/vinirmith/Agentic-RAG');
+        line('');
+        line('  Traffic-Sign-Detection-AI', 'mute');
+        line('  YOLOv8 detection with international traffic sign dataset', 'dim');
+        linkLine('  → ', 'https://github.com/vinirmith/Traffic-Sign-Detection-AI');
+        line('');
+        line('  Sentiment-Analysis                                       Python', 'mute');
+        line('  NLP-based sentiment classification pipeline', 'dim');
+        linkLine('  → ', 'https://github.com/vinirmith/sentiment-analysis');
+        line('');
+        line('  Loan-Approval-Prediction                         Jupyter Notebook', 'mute');
+        line('  98% accuracy ensemble model (SVM / RF / XGBoost / AdaBoost)', 'dim');
+        linkLine('  → ', 'https://github.com/vinirmith/Loan-Approval-Prediction');
+        line('');
+        line('  Drowsiness-Detection                             Jupyter Notebook', 'mute');
+        line('  Real-time driver drowsiness detection via computer vision', 'dim');
+        linkLine('  → ', 'https://github.com/vinirmith/Drowsiness-detection');
+        line('');
+        linkLine('  More at ', 'https://github.com/vinirmith');
         line('');
     },
     help: () => {
@@ -219,6 +262,7 @@ const COMMANDS = {
                 about:      'summary, education & certifications',
                 skills:     'full tech stack and soft skills',
                 experience: 'complete work history',
+                projects:   'open-source & side projects on GitHub',
                 contact:    'get in touch',
                 help:       'list commands',
             };
@@ -251,6 +295,19 @@ function line(text, cls = '') {
     screenEl.scrollTop = screenEl.scrollHeight;
 }
 
+function linkLine(prefix, url, cls = 'mute') {
+    const div = document.createElement('div');
+    div.className = 'out-line' + (cls ? ' ' + cls : '');
+    const safePrefix = esc(prefix);
+    const safeUrl = esc(url);
+    const displayUrl = url.startsWith('mailto:')
+        ? esc(url.replace('mailto:', ''))
+        : esc(url.replace(/^https?:\/\//, ''));
+    div.innerHTML = `${safePrefix}<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="term-link">${displayUrl}</a>`;
+    outputEl.appendChild(div);
+    screenEl.scrollTop = screenEl.scrollHeight;
+}
+
 function pinnedLine(text, cls = '') {
     const div = makeLine(text, cls);
     pinnedEl.appendChild(div);
@@ -269,6 +326,18 @@ function promptLine(cmd) {
     screenEl.scrollTop = screenEl.scrollHeight;
 }
 
+function appendClearBtn() {
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'padding: 2px var(--pad-x) 10px;';
+    const btn = document.createElement('button');
+    btn.className = 'clear-btn';
+    btn.textContent = '× clear';
+    btn.addEventListener('click', () => { outputEl.innerHTML = ''; });
+    wrap.appendChild(btn);
+    outputEl.appendChild(wrap);
+    screenEl.scrollTop = screenEl.scrollHeight;
+}
+
 function runCommand(raw) {
     const cmd = raw.trim().toLowerCase();
     if (!cmd) return;
@@ -281,6 +350,7 @@ function runCommand(raw) {
 
     if (COMMANDS[cmd]) {
         COMMANDS[cmd]();
+        if (cmd !== 'clear') appendClearBtn();
     } else {
         line('');
         line(`  command not found: ${raw.trim()}`, 'err');
@@ -388,8 +458,20 @@ function printWelcome() {
     pinnedLine('  ✓  AWS · GCP · Azure · MCP · A2A Workflows', 'dim');
     pinnedLine('  ✓  PyTorch · TensorFlow · Pinecone · ChromaDB', 'dim');
     pinnedLine('');
-    pinnedLine('  Commands:  about · skills · experience · contact · clear', 'dim');
-    pinnedLine('');
+
+    const cmdWrap = document.createElement('div');
+    cmdWrap.style.cssText = 'padding: 4px var(--pad-x) 12px; display: flex; flex-wrap: wrap; gap: 8px;';
+    CMD_LIST.forEach(cmd => {
+        const btn = document.createElement('button');
+        btn.className = 'cmd-btn';
+        btn.textContent = cmd;
+        btn.addEventListener('click', () => {
+            captureEl.focus();
+            runCommand(cmd);
+        });
+        cmdWrap.appendChild(btn);
+    });
+    pinnedEl.appendChild(cmdWrap);
 }
 
 window.addEventListener('load', () => {
