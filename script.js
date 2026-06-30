@@ -224,6 +224,7 @@ const COMMANDS = {
         linkLine('  Email      ', 'mailto:kuretivinirmith1@gmail.com');
         linkLine('  GitHub     ', 'https://github.com/vinirmith');
         linkLine('  LinkedIn   ', 'https://linkedin.com/in/vinirmith-kureti');
+        linkLine('  Portfolio  ', 'https://vinirmith.in/');
         line('  Mobile     +91 7995678578', 'mute');
         line('  Location   Hyderabad, India', 'dim');
         line('');
